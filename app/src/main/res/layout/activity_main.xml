@@ -1,47 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="#556ee9"
     android:gravity="center_horizontal"
-    >
-<!-- Aqui van nuestros componentes-->
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Escriba sus datos "
-android:textSize="18sp"
-    android:padding="10dp"
-android:layout_margin="10dp"
-    android:gravity="center"
-android:textColor="#fff"
-    android:id="@+id/tv_titulo"
+    android:orientation="vertical">
+    <!-- Aqui van nuestros componentes-->
 
-    />
+
+    <ImageView
+        android:layout_width="228dp"
+        android:layout_height="121dp"
+        android:layout_margin="15dp"
+        android:src="@drawable/logo" />
 
     <EditText
+        android:id="@+id/et_masa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Escriba su nombre"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:background="#1F4A64"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/esquinas"
+        android:gravity="center"
+        android:hint="Peso(Kilogramos)"
+        android:padding="15dp"
+        android:textColor="#ffffff"
+        android:textColorHint="#bfccfa" />
+
+    <EditText
+        android:id="@+id/et_altura"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/esquinas"
+        android:hint="Altura (Cm)"
+        android:padding="15dp"
+        android:textColorHint="#bfccfa"
+        android:textColor="#ffffff"
+        />
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
         android:padding="10dp"
-        android:textColorHint="#6799da"
-        android:id="@+id/et_nombre"
+        android:text="Escriba sus datos para calcular su IMC "
+        android:textColor="#fff"
+        android:textSize="18sp"
 
         />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CALCULAR"
-
-        android:fontFamily="sans-serif-condensed"
-        android:background="#e57094f5"
         android:id="@+id/btn_calcular"
+        android:layout_width="334dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
+
+        android:background="#e57094f5"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="CALCULAR"
+        android:textColor="#ffffff" />
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Tu indice de grasa corporal es"
+    android:textSize="18sp"
+    android:padding="10dp"
+    android:textColor="#ffffff"
+    android:id="@+id/tv_tuIMC"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+
+    />
+
+
+    <EditText
+        android:id="@+id/et_imc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/esquinas"
+        android:hint="0"
+        android:padding="15dp"
+        android:textColorHint="#6799da"
+        android:textColor="#ffffff"
+
         />
+
 </LinearLayout>
